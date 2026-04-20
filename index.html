@@ -25,11 +25,11 @@
         <a href="./index.html" class="logo"
           ><span class="logo-span">Web</span>Studio</a
         >
-        <a href="/" class="menu-burger">
-          <svg class="" width="16.8" height="14.4">
+        <button type="button" class="menu-burger" aria-label="Open menu">
+          <svg width="24" height="24">
             <use href="./images/icons.svg#icon-Group"></use>
           </svg>
-        </a>
+        </button>
         <nav class="navigation">
           <ul class="navigation-list">
             <li>
@@ -70,7 +70,7 @@
           </div>
         </div>
       </section>
-      <!-- <section class="features">
+      <section class="features">
         <div class="container">
           <h2 class="visually-hidden">Our Features</h2>
           <ul class="features-list">
@@ -475,9 +475,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-container">
         <div class="footer-decor">
           <a href="./index.html" class="logo-footer"
@@ -557,10 +557,10 @@
           </form>
         </div>
       </div>
-    </footer> -->
-    <div class="backdrop">
+    </footer>
+    <div class="backdrop is-open">
       <div class="modal">
-        <button type="button" class="modal-close">
+        <button type="button" class="modal-close" aria-label="Close modal">
           <svg class="modal-close-svg" width="8" height="8">
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
@@ -620,6 +620,80 @@
           </div>
           <button class="modal-submit" type="submit">Send</button>
         </form>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu-container">
+        <button type="button" class="mobile-menu-close" aria-label="Close menu">
+          <svg class="mobile-menu-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+
+        <nav class="mobile-navigation">
+          <ul class="mobile-navigation-list">
+            <li>
+              <a href="./index.html" class="mobile-navigation-link current">
+                Studio
+              </a>
+            </li>
+            <li>
+              <a href="/" class="mobile-navigation-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="/" class="mobile-navigation-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-menu-bottom">
+          <address class="mobile-contacts">
+            <ul class="mobile-contact-list">
+              <li>
+                <a href="tel:+110001111111" class="mobile-number">
+                  +11 (000) 111-11-11
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@devstudio.com" class="mobile-mail">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <ul class="mobile-social-list">
+            <li>
+              <a class="mobile-social-link" href="" aria-label="Instagram link">
+                <svg class="icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social-link" href="" aria-label="Twitter link">
+                <svg class="icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social-link" href="" aria-label="Facebook link">
+                <svg class="icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social-link" href="" aria-label="LinkedIn link">
+                <svg class="icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
