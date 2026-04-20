@@ -50,10 +50,23 @@ img {
 }
 
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  padding-inline: 15px;
+  padding-inline: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1128px;
+    padding-inline: 0;
+  }
 }
 
 /* header */
@@ -69,6 +82,96 @@ img {
 .flex-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.menu-burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #2e2f42;
+}
+
+.menu-burger svg {
+  display: block;
+  fill: currentColor;
+}
+
+.navigation,
+.contacts {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-container {
+    justify-content: flex-start;
+  }
+
+  .menu-burger {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-inline: 120px;
+  }
+
+  .navigation-list {
+    gap: 24px;
+  }
+
+  .contacts {
+    display: block;
+    margin-left: 0;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .mail,
+  .number {
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    padding-block: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .navigation {
+    margin-inline: 0;
+    margin-left: 76px;
+  }
+
+  .navigation-list {
+    gap: 40px;
+  }
+
+  .contacts {
+    margin-left: auto;
+  }
+
+  .contact-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .mail,
+  .number {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-block: 24px;
+  }
 }
 
 .navigation-list {
@@ -85,17 +188,8 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #2e2f42;
-  margin-right: 76px;
-  padding-block: 24px;
-}
-
-.logo-footer {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.16667;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #f4f4fd;
+  margin-right: 0;
+  padding-block: 16px;
 }
 
 .logo-span {
@@ -138,7 +232,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  display: flex;
+  display: none;
   align-items: center;
   /* padding-right: 332px; */
 }
@@ -180,6 +274,66 @@ img {
   color: #404bbf;
 }
 
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-inline: 120px;
+  }
+
+  .navigation-list {
+    gap: 24px;
+  }
+
+  .contacts {
+    display: block;
+    margin-left: 0;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .mail,
+  .number {
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    padding-block: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .navigation {
+    margin-inline: 0;
+    margin-left: 76px;
+  }
+
+  .navigation-list {
+    gap: 40px;
+  }
+
+  .contacts {
+    margin-left: auto;
+  }
+
+  .contact-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .mail,
+  .number {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-block: 24px;
+  }
+}
+
 /* hero */
 
 .hero {
@@ -187,13 +341,12 @@ img {
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url('../images/people-office.jpg');
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 72px 0;
 }
 
 .hero-container {
@@ -204,13 +357,48 @@ img {
 
 .main-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07143;
+  font-size: 36px;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
-  margin-bottom: 48px;
+  max-width: 216px;
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    padding: 112px 0;
+  }
+
+  .main-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07143;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    max-width: 1440px;
+    padding: 188px 0;
+  }
+
+  .main-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07143;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
 }
 
 .hero-wrapper {
