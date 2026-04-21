@@ -763,6 +763,10 @@ img {
   background-color: #31d0aa;
 }
 
+.icon-send {
+  fill: #fff;
+}
+
 @media screen and (min-width: 768px) {
   .footer-container {
     flex-direction: row;
